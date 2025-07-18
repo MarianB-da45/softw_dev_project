@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Incoming Requests{% endblock %}
+{% block content %}
+<h2>Incoming Requests</h2>
+<ul class="list-group">
+  {% for req in requests %}
+  <li class="list-group-item">
+    From: {{ req.mentee.username }} — Status: <strong>{{ req.status|upper }}</strong>
+    {% if req.status == 'pending' %}
+    <form method="post" action="{% url 'accept_request' req.id %}" class="mt-2">
+      {% csrf_token %}
+      <button class="btn btn-success btn-sm">Accept</button>
+    </form>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

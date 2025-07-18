@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}My Requests{% endblock %}
+{% block content %}
+<h2>My Sent Requests</h2>
+<ul class="list-group">
+  {% for req in requests %}
+    <li class="list-group-item">
+      To: {{ req.mentor.username }} — Status: <strong>{{ req.status|upper }}</strong>
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}

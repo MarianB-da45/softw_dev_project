@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Find Mentors{% endblock %}
+{% block content %}
+<h2>Find a Mentor</h2>
+<form method="get" class="mb-3">
+  <input type="text" name="q" value="{{ query }}" placeholder="Search by skill or bio" class="form-control">
+</form>
+{% if mentors %}
+<ul class="list-group">
+  {% for mentor in mentors %}
+  <li class="list-group-item">
+    <strong>{{ mentor.username }}</strong><br>
+    {{ mentor.profile.bio }}<br>
+    <small>Skills: {{ mentor.profile.skills }}</small><br>
+    <form method="post">
+      {% csrf_token %}
+      <input type="hidden" name="mentor_id" value="{{ mentor.id }}">
+      <button class="btn btn-sm btn-primary mt-1">Request Mentorship</button>
+    </form>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No mentors found.</p>
+{% endif %}
+{% endblock %}

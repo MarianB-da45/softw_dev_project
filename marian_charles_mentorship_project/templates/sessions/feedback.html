@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Session Feedback{% endblock %}
+{% block content %}
+<h2>Session Feedback</h2>
+<form method="post">
+  {% csrf_token %}
+  <div class="mb-3">
+    <label for="rating" class="form-label">Rating</label>
+    <select class="form-select" name="rating">
+      {% for star in "12345" %}
+        <option value="{{ star }}">{{ star }} Star</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="comment" class="form-label">Comment</label>
+    <textarea class="form-control" name="comment"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit Feedback</button>
+</form>
+{% endblock %}
