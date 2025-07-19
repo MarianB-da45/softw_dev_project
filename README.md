@@ -55,10 +55,23 @@ A full-stack web application for matching mentors with mentees in an incubator o
 ## Screenshots:
 (#![Uploading Screenshot (4).png…]()
 )
+(#[![Uploading Screenshot (5).png…]()
+])
+(#[![Uploading Screenshot (6).png…]()
+])
+(#[![Uploading Screenshot (7).png…]()
+])
+(#[![Uploading Screenshot (8).png…]()
+])
+(#[![Uploading Screenshot (9).png…]()
+])
+(#[![Uploading Screenshot (10).png…]()
+])
 
 
 ## Tech Stack
 
+- **IDE**: PyCharm Community Edition 2024.3.5
 - **Frontend**: Bootstrap CSS *(customizable based on your choice)*
 - **Backend**: Django 
 - **Database**: SQL 
