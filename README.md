@@ -53,7 +53,8 @@ A full-stack web application for matching mentors with mentees in an incubator o
 - Manually assign mentors to mentees if needed
 
 ## Screenshots:
-[Download Here].[Uploading Screenshot (4).png…]()
+[!screenshot].[Uploading Screenshot (4).png…]()
+![Screenshot](https://raw.githubusercontent.com/MariaB-da45/softw_dev_project/main/screenshot/screenshot.png)
 
 (#[![Uploading Screenshot (5).png…]()
 ])
